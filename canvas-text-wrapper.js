@@ -191,8 +191,9 @@
             break;
           } else {
             while ((context.measureText(lines[j] + words[i]).width <= MAX_TXT_WIDTH) && (i < words.length)) {
+              const space = opts.lineBreak === 'all' ? '' : ' '
 
-              lines[j] += words[i] + opts.lineBreak === 'all' ? '' : ' ';
+              lines[j] += words[i] + space
               i++;
 
               if (opts.allowNewLine) {
