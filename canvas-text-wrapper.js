@@ -192,7 +192,7 @@
           } else {
             while ((context.measureText(lines[j] + words[i]).width <= MAX_TXT_WIDTH) && (i < words.length)) {
 
-              lines[j] += words[i] + ' ';
+              lines[j] += words[i] + opts.lineBreak === 'all' ? '' : ' ';
               i++;
 
               if (opts.allowNewLine) {
