@@ -335,8 +335,8 @@
       if (typeof opts.fitParent !== 'boolean')
         throw new TypeError('Property "fitParent" must be a Boolean.');
 
-      if (opts.lineBreak.toLocaleLowerCase() !== 'auto' && opts.lineBreak.toLocaleLowerCase() !== 'word')
-        throw new TypeError('Property "lineBreak" must be set to either "auto" or "word".');
+      if (opts.lineBreak.toLocaleLowerCase() !== 'auto' && opts.lineBreak.toLocaleLowerCase() !== 'word' && opts.lineBreak.toLocaleLowerCase() !== 'all')
+        throw new TypeError('Property "lineBreak" must be set to either "auto" or "word" or "all".');
 
       if (typeof opts.sizeToFill !== 'boolean')
         throw new TypeError('Property "sizeToFill" must be a Boolean.');
