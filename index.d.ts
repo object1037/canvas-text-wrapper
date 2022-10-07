@@ -34,7 +34,7 @@ export interface CanvasTextWrapperOptions {
     * "auto" - text goes to the next line on a whole word when there's no room
     * "word" - each next word is placed on a new line
     */
-   lineBreak?: "auto" | "word",
+   lineBreak?: "auto" | "word" | "all",
    /**
     * Ignore given font size and line height and resize text to fill its padded container.
     */

@@ -153,6 +153,9 @@
       }
 
       var words = text.trim().split(/\s+/);
+      if (opts.lineBreak === 'all') {
+        words = text.trim().split('');
+      }
       checkLength(words);
       breakText(words);
 
@@ -183,7 +186,7 @@
       for (var i = 0, j = 0; i < words.length; j++) {
         lines[j] = '';
 
-        if (opts.lineBreak === 'auto') {
+        if (opts.lineBreak === 'auto' || opts.lineBreak === 'all') {
           if (context.measureText(lines[j] + words[i]).width > MAX_TXT_WIDTH) {
             break;
           } else {
